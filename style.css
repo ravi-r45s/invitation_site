@@ -119,16 +119,22 @@ h2 em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(-
 .timeline-content{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .timeline-date{font-size:12px;letter-spacing:.03em;color:var(--gold)}
 .timeline-content h3{font-size:28px;color:var(--wine);font-weight:500;margin:2px 0 4px}
-.timeline-content .venue{color:var(--muted);margin:0;font-size:14px}
+.timeline-sub{font-family:"Fraunces";font-style:italic;font-weight:400;font-size:14px;color:var(--wine);margin:0 0 4px}
+.timeline-content .venue{color:var(--muted);margin:0;font-size:14px;line-height:1.5}
 
 /* ---------- Venue ---------- */
 .venue-section{background:#efe0ce}
-.venue-box{width:min(880px,100%);background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 26px 60px rgba(75,25,32,.12);display:grid;grid-template-columns:1fr 1fr;text-align:left}
-.venue-photo{position:relative;min-height:340px;background:url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85") center/cover}
+.venues-grid{width:min(960px,100%);display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.venue-box{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 26px 60px rgba(75,25,32,.12);text-align:left;display:flex;flex-direction:column}
+.venue-photo{position:relative;min-height:220px;background-position:center;background-size:cover}
+.venue-photo-home{background-image:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85")}
+.venue-photo-hall{background-image:url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85")}
 .venue-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-60%);color:var(--wine);font-size:26px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
-.venue-details{padding:44px 36px;display:flex;flex-direction:column;justify-content:center}
-.venue-details h3{font-size:32px;color:var(--wine);font-weight:500;margin:0 0 10px}
-.venue-details p{line-height:1.8;color:var(--muted);margin:0 0 22px}
+.venue-details{padding:32px 28px;display:flex;flex-direction:column;flex:1}
+.venue-tag{font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:8px}
+.venue-details h3{font-size:28px;color:var(--wine);font-weight:500;margin:0 0 10px}
+.venue-details p{line-height:1.7;color:var(--muted);margin:0 0 20px;font-size:14px}
+.venue-details .button{margin-top:auto}
 
 .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;background:var(--wine);color:#fff;padding:15px 30px;border-radius:100px;text-decoration:none;font:500 13px "DM Sans";letter-spacing:.02em;cursor:pointer;transition:.25s ease;align-self:flex-start}
 .button:hover{background:var(--wine-deep);transform:translateY(-2px)}
@@ -179,8 +185,8 @@ footer{text-align:center;padding:26px;background:var(--wine-deep);color:#e9cdbb;
   .story-grid{grid-template-columns:1fr;text-align:center}
   .story-copy{text-align:center}
   .photo-stack{max-width:340px;height:420px}
-  .venue-box{grid-template-columns:1fr}
-  .venue-photo{min-height:220px}
+  .venues-grid{grid-template-columns:1fr}
+  .venue-photo{min-height:200px}
 }
 @media(max-width:700px){
   .section{padding:96px 18px}

@@ -6,16 +6,15 @@ const bgMusic = document.getElementById("bgMusic");
 
 function openInvitation(){
 
-  // Start background music
-  if (bgMusic) {
-    bgMusic.play()
-      .then(() => {
-        musicBtn.textContent = "❚❚";
-      })
-      .catch((error) => {
-        console.log("Music could not start:", error);
-      });
-  }
+  // Start wedding music after user taps the envelope
+  bgMusic.play()
+    .then(() => {
+      musicBtn.textContent = "❚❚";
+      console.log("Music started successfully");
+    })
+    .catch((error) => {
+      console.log("Music error:", error);
+    });
 
   envelope.classList.add("revealed");
 
@@ -64,7 +63,7 @@ window.addEventListener("scroll",updateProgress,{passive:true});
 
 // Countdown to the wedding ceremony
 function startCountdown(){
-  const target = new Date("2026-11-30T10:30:00+05:30").getTime();
+  const target = new Date("2026-11-30T11:00:00+05:30").getTime();
   const days = document.getElementById("cdDays");
   const hours = document.getElementById("cdHours");
   const mins = document.getElementById("cdMins");
@@ -172,15 +171,15 @@ document.getElementById("rsvpForm").addEventListener("submit",e=>{
 
 // Music toggle — add an MP3 source in HTML to make this play.
 musicBtn.addEventListener("click", async () => {
-  if (bgMusic.paused) {
-    try {
+  try {
+    if (bgMusic.paused) {
       await bgMusic.play();
       musicBtn.textContent = "❚❚";
-    } catch (error) {
-      console.log("Music error:", error);
+    } else {
+      bgMusic.pause();
+      musicBtn.textContent = "♪";
     }
-  } else {
-    bgMusic.pause();
-    musicBtn.textContent = "♪";
+  } catch (error) {
+    console.error("Music playback error:", error);
   }
 });
