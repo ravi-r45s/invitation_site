@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7c1f2c">
+  <title>Meenal & Avinash | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..700;1,9..144,400..600&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div class="progress-bar" id="progressBar"></div>
+  <div id="petals" aria-hidden="true"></div>
+
+  <!-- Opening screen -->
+  <section class="opening" id="opening">
+    <div class="opening-inner">
+      <p class="kicker">A wedding invitation</p>
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Tap to reveal invitation">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="seal"><span>A</span><small>&amp;</small><span>V</span></div>
+        </div>
+        <div class="envelope-fold left"></div>
+        <div class="envelope-fold right"></div>
+      </div>
+      <p class="reveal-text">Tap to open</p>
+      <p class="hint">a little magic waits inside</p>
+    </div>
+  </section>
+
+  <main id="invitation" class="hidden">
+
+    <!-- Hero -->
+    <section class="hero section" id="top">
+      <div class="hero-media"></div>
+      <div class="hero-scrim"></div>
+      <div class="hero-inner">
+        <p class="devanagari">॥ श्री गणेशाय नमः ॥</p>
+        <p class="hero-lede">With the blessings of Lord Ganesha and our families,<br>we joyfully invite you to the wedding of</p>
+        <h1 class="hero-names">
+          <span class="reveal-mask"><span class="reveal-inner">Akriti</span></span>
+          <i class="reveal-mask"><span class="reveal-inner">&amp;</span></i>
+          <span class="reveal-mask"><span class="reveal-inner">Vikash</span></span>
+        </h1>
+        <p class="hero-parents">Daughter of Mr. Murlidhar Mishra &amp; Mrs. Poonam Devi<br>Son of Mr. Raj Kumar &amp; Mrs. Madhubala Devi</p>
+
+        <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+          <div class="countdown-unit"><span id="cdDays">00</span><small>days</small></div>
+          <div class="countdown-unit"><span id="cdHours">00</span><small>hrs</small></div>
+          <div class="countdown-unit"><span id="cdMins">00</span><small>min</small></div>
+          <div class="countdown-unit"><span id="cdSecs">00</span><small>sec</small></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#story" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- Save the date -->
+    <section class="date-section section reveal" id="date">
+      <div class="section-head">
+        <span class="chapter-no">01</span>
+        <h2>Save the <em>date</em></h2>
+        <p class="section-copy">Scratch the last card to uncover our wedding year.</p>
+      </div>
+      <div class="date-cards">
+        <div class="date-card"><small>Month</small><strong>July</strong></div>
+        <div class="date-card"><small>Day</small><strong>01</strong></div>
+        <div class="date-card scratch-wrap">
+          <small>Year</small>
+          <strong class="hidden-year">2027</strong>
+          <canvas id="scratchCanvas" width="260" height="190"></canvas>
+          <span class="scratch-label">scratch here</span>
+        </div>
+      </div>
+      <p class="date-note">A lifetime of togetherness begins here</p>
+    </section>
+
+    <!-- Story -->
+    <section class="story section reveal" id="story">
+      <div class="story-grid">
+        <div class="story-copy">
+          <span class="chapter-no">02</span>
+          <h2>Written<br>in the <em>stars</em></h2>
+          <p class="section-copy">Two families, one story worth celebrating &mdash; and a wedding we can't wait to share with you.</p>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid p1">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Couple celebrating">
+            <figcaption>Where it all began</figcaption>
+          </figure>
+          <figure class="polaroid p2">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Wedding moment">
+            <figcaption>Forever looks good on us</figcaption>
+          </figure>
+          <figure class="polaroid p3">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85" alt="Wedding flowers">
+            <figcaption>Our beautiful beginning</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="events section reveal" id="celebration">
+      <div class="section-head">
+        <span class="chapter-no">03</span>
+        <h2>Three days,<br><em>one celebration</em></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"><i id="timelineFill"></i></div>
+
+        <article class="timeline-item">
+          <span class="timeline-dot">1</span>
+          <div class="timeline-card">
+            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Tue, 30 June 2027 &middot; 7:00 PM</span>
+              <h3>Sangeet Night</h3>
+              <p class="venue">Rajlakshmi Kalyana Mandapam</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-dot">2</span>
+          <div class="timeline-card">
+            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Wed, 01 July 2027 &middot; 10:30 AM</span>
+              <h3>Wedding Ceremony</h3>
+              <p class="venue">Rajlakshmi Kalyana Mandapam</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-dot">3</span>
+          <div class="timeline-card">
+            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Wed, 01 July 2027 &middot; 7:30 PM</span>
+              <h3>Reception</h3>
+              <p class="venue">The Grand Celebration Hall</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="venue-section section reveal" id="venue">
+      <div class="section-head">
+        <span class="chapter-no">04</span>
+        <h2>Come celebrate<br><em>with us</em></h2>
+      </div>
+      <div class="venue-box">
+        <div class="venue-photo">
+          <span class="venue-pin">&#9673;</span>
+        </div>
+        <div class="venue-details">
+          <h3>Rajlakshmi Kalyana Mandapam</h3>
+          <p>123 Celebration Road,<br>Chennai, Tamil Nadu</p>
+          <a class="button" href="https://www.google.com/maps" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing invitation -->
+    <section class="closing section reveal">
+      <div class="closing-inner">
+        <p class="closing-copy">Your presence will turn this milestone into a memory we'll cherish forever.</p>
+        <p class="closing-copy">Come dance, laugh and celebrate with us.</p>
+        <p class="script">Meenal <span>&amp;</span> Avinash</p>
+        <p class="small-caps">Together with our families</p>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp section reveal" id="rsvp">
+      <div id="rsvpFormWrap">
+        <span class="chapter-no on-light">05</span>
+        <h2>Will you<br><em>join us?</em></h2>
+        <p class="section-copy">We would be delighted to celebrate this special day with you.</p>
+        <form id="rsvpForm">
+          <label>Your name<input required type="text" id="guestName" placeholder="Enter your name"></label>
+
+          <div class="field">
+            <span class="field-label">Will you attend?</span>
+            <div class="segmented" id="attendanceGroup">
+              <button type="button" class="segment" data-value="Joyfully, yes!">Joyfully, yes</button>
+              <button type="button" class="segment" data-value="Sorry, I can't make it">Can't make it</button>
+            </div>
+            <input type="hidden" id="attendance" required>
+          </div>
+
+          <label>Message <span class="optional">(optional)</span><textarea id="message" rows="3" placeholder="A little note for the couple..."></textarea></label>
+          <button class="button full" type="submit">Send RSVP</button>
+        </form>
+      </div>
+      <div class="thank-you hidden" id="thankYou">
+        <div class="check">&#10003;</div>
+        <h2>Thank you</h2>
+        <p>Your RSVP has been beautifully received.</p>
+        <p>We can't wait to celebrate with you.</p>
+      </div>
+    </section>
+
+    <footer>Made with love &middot; Meenal &amp; Avinash &middot; 2027</footer>
+  </main>
+
+  <button class="music" id="musicBtn" aria-label="Toggle music">&#9834;</button>
+  <audio id="bgMusic" loop preload="none">
+    <!-- Replace this source with your own MP3 -->
+     <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
