@@ -80,6 +80,18 @@ h2 em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(-
 .scroll-cue span{position:absolute;left:50%;top:6px;width:4px;height:8px;border-radius:2px;background:var(--gold);transform:translateX(-50%);animation:cueDrop 1.8s ease-in-out infinite}
 @keyframes cueDrop{0%{opacity:1;top:6px}70%{opacity:0;top:18px}100%{opacity:0;top:6px}}
 
+/* ---------- Meet the couple ---------- */
+.couple-intro{background:#f2e2d0;min-height:auto;padding:100px 24px}
+.couple-duo{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.couple-portrait{margin:0;text-align:center}
+.couple-portrait img{width:210px;height:260px;object-fit:cover;border-radius:20px;box-shadow:0 26px 54px rgba(75,25,32,.2);border:5px solid #fffaf3;transition:transform .4s ease}
+.couple-portrait.bride img{transform:rotate(-4deg)}
+.couple-portrait.groom img{transform:rotate(4deg)}
+.couple-portrait:hover img{transform:rotate(0) scale(1.04)}
+.couple-portrait figcaption{margin-top:18px;font-family:"Fraunces";font-size:24px;font-style:italic;font-weight:400;color:var(--wine)}
+.couple-portrait figcaption span{display:block;font-family:"DM Sans";font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.couple-and{font-family:"Fraunces";font-style:italic;font-size:44px;color:var(--gold);align-self:center;margin-bottom:34px}
+
 /* ---------- Save the date ---------- */
 .date-section{background:var(--paper)}
 .date-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:min(680px,100%);margin:40px auto 24px}
@@ -120,6 +132,10 @@ h2 em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(-
 .timeline-date{font-size:12px;letter-spacing:.03em;color:var(--gold)}
 .timeline-content h3{font-size:28px;color:var(--wine);font-weight:500;margin:2px 0 4px}
 .timeline-sub{font-family:"Fraunces";font-style:italic;font-weight:400;font-size:14px;color:var(--wine);margin:0 0 4px}
+.timeline-person{display:flex;align-items:center;gap:16px;margin:4px 0 2px}
+.timeline-person h3{margin:0 0 2px}
+.timeline-person .timeline-sub{margin:0}
+.person-photo{width:88px;height:88px;flex-shrink:0;border-radius:50%;object-fit:cover;border:3px solid var(--gold-light);box-shadow:0 10px 22px rgba(75,25,32,.22)}
 .timeline-content .venue{color:var(--muted);margin:0;font-size:14px;line-height:1.5}
 
 /* ---------- Venue ---------- */
@@ -187,9 +203,12 @@ footer{text-align:center;padding:26px;background:var(--wine-deep);color:#e9cdbb;
   .photo-stack{max-width:340px;height:420px}
   .venues-grid{grid-template-columns:1fr}
   .venue-photo{min-height:200px}
+  .couple-portrait img{width:170px;height:210px}
+  .couple-and{font-size:34px;margin-bottom:20px}
 }
 @media(max-width:700px){
   .section{padding:96px 18px}
+  .person-photo{width:64px;height:64px}
   .date-cards{gap:8px}
   .date-card{min-height:130px}
   .date-card strong{font-size:26px}
@@ -202,4 +221,12 @@ footer{text-align:center;padding:26px;background:var(--wine-deep);color:#e9cdbb;
   .timeline-content h3{font-size:24px}
   .venue-details{padding:32px 24px}
   .script{font-size:48px}
+}
+@media(max-width:520px){
+  .couple-duo{flex-direction:column;gap:22px}
+  .couple-portrait img{width:190px;height:230px}
+  .couple-portrait.bride img,.couple-portrait.groom img{transform:rotate(0)}
+  .couple-portrait:hover img{transform:scale(1.03)}
+  .couple-and{margin:0;font-size:30px}
+  .couple-intro{padding:80px 24px}
 }
