@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
   <title>Akriti & Vikash | Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..700;1,9..144,400..600&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..700;1,9..144,400..600&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="locked">
   <div class="progress-bar" id="progressBar"></div>
   <div id="petals" aria-hidden="true"></div>
@@ -39,13 +43,15 @@
       <div class="hero-scrim"></div>
       <div class="hero-inner">
         <p class="devanagari">॥ श्री गणेशाय नमः ॥</p>
-        <p class="hero-lede">With the blessings of Lord Ganesha, Mr. &amp; Mrs. Sharma joyfully invite you to the wedding of their beloved daughter</p>
+        <p class="hero-lede">With the blessings of Lord Ganesha, Mr. &amp; Mrs. Mishra joyfully invite you to the
+          wedding of their beloved daughter</p>
         <h1 class="hero-names">
           <span class="reveal-mask"><span class="reveal-inner">Akriti</span></span>
           <i class="reveal-mask"><span class="reveal-inner">&amp;</span></i>
           <span class="reveal-mask"><span class="reveal-inner">Vikash</span></span>
         </h1>
-        <p class="hero-parents">Daughter of Mr. Murlidhar Mishra &amp; Mrs. Poonam devi<br>with Vikash, son of Mr. Raj Kumar &amp; Mrs. Madhabala Devi</p>
+        <p class="hero-parents">Daughter of Mr. Murlidhar Mishra &amp; Mrs. Poonam devi<br>with Vikash, son of Mr. Raj
+          Kumar &amp; Mrs. Madhabala Devi</p>
 
         <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
           <div class="countdown-unit"><span id="cdDays">00</span><small>days</small></div>
@@ -73,19 +79,50 @@
     </section>
 
     <!-- Save the date -->
-    <section class="date-section section reveal" id="date">
+    <!-- <section class="date-section section reveal" id="date">
       <div class="section-head">
         <span class="chapter-no">01</span>
         <h2>Save the <em>date</em></h2>
-        <p class="section-copy">Scratch the last card to uncover our wedding year.</p>
+        <p class="section-copy">Scratch each card to reveal the wedding date.</p>
       </div>
       <div class="date-cards">
-        <div class="date-card"><small>Month</small><strong>Nov</strong></div>
-        <div class="date-card"><small>Day</small><strong>30</strong></div>
+        <div class="date-card"><small>Month</small><strong>Nov</strong><canvas id="scratchCanvas" width="260"
+            height="190"></canvas></div>
+        <div class="date-card"><small>Day</small><strong>30</strong><canvas id="scratchCanvas" width="260"
+            height="190"></canvas></div>
         <div class="date-card scratch-wrap">
           <small>Year</small>
           <strong class="hidden-year">2026</strong>
           <canvas id="scratchCanvas" width="260" height="190"></canvas>
+          <span class="scratch-label">scratch here</span>
+        </div>
+      </div>
+      <p class="date-note">A lifetime of togetherness begins here</p>
+    </section> -->
+
+    <section class="date-section section reveal" id="date">
+      <div class="section-head">
+        <span class="chapter-no">01</span>
+        <h2>Save the <em>date</em></h2>
+        <p class="section-copy">Scratch each card to reveal the wedding date.</p>
+      </div>
+      <div class="date-cards">
+        <div class="date-card scratch-wrap">
+          <small>Month</small>
+          <strong>Nov</strong>
+          <canvas class="scratchCanvas" width="260" height="190"></canvas>
+          <span class="scratch-label">scratch here</span>
+        </div>
+        <div class="date-card scratch-wrap">
+          <small>Day</small>
+          <strong>30</strong>
+          <canvas class="scratchCanvas" width="260" height="190"></canvas>
+          <span class="scratch-label">scratch here</span>
+        </div>
+        <div class="date-card scratch-wrap">
+          <small>Year</small>
+          <strong>2026</strong>
+          <canvas class="scratchCanvas" width="260" height="190"></canvas>
           <span class="scratch-label">scratch here</span>
         </div>
       </div>
@@ -98,19 +135,23 @@
         <div class="story-copy">
           <span class="chapter-no">02</span>
           <h2>Written<br>in the <em>stars</em></h2>
-          <p class="section-copy">Two families, one story worth celebrating &mdash; and a wedding we can't wait to share with you.</p>
+          <p class="section-copy">Two families, one story worth celebrating &mdash; and a wedding we can't wait to share
+            with you.</p>
         </div>
         <div class="photo-stack">
           <figure class="polaroid p1">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Couple celebrating">
+            <img src="./images/where_it_all_began.png"
+              alt="Couple celebrating">
             <figcaption>Where it all began</figcaption>
           </figure>
           <figure class="polaroid p2">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Wedding moment">
+            <img src="./images/Forever_looks_good.png"
+              alt="Wedding moment">
             <figcaption>Forever looks good on us</figcaption>
           </figure>
           <figure class="polaroid p3">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85" alt="Wedding flowers">
+            <img src="./images/our_beautiful_.png"
+              alt="Wedding flowers">
             <figcaption>Our beautiful beginning</figcaption>
           </figure>
         </div>
@@ -131,7 +172,9 @@
         <article class="timeline-item">
           <span class="timeline-dot">1</span>
           <div class="timeline-card">
-            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-image"
+              style="background-image:url('./images/mehndi.png')">
+            </div>
             <div class="timeline-content">
               <span class="timeline-date">Sat, 28 Nov 2026 &middot; 5:00 PM</span>
               <h3>Mehndi</h3>
@@ -143,7 +186,9 @@
         <article class="timeline-item">
           <span class="timeline-dot">2</span>
           <div class="timeline-card">
-            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-image"
+              style="background-image:url('./images/haldi.png')">
+            </div>
             <div class="timeline-content">
               <span class="timeline-date">Sun, 29 Nov 2026 &middot; 10:00 AM</span>
               <h3>Haldi</h3>
@@ -155,7 +200,9 @@
         <article class="timeline-item">
           <span class="timeline-dot">3</span>
           <div class="timeline-card">
-            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-image"
+              style="background-image:url('./images/Janeu.png')">
+            </div>
             <div class="timeline-content">
               <span class="timeline-date">Mon, 30 Nov 2026 &middot; 8:00 AM</span>
               <div class="timeline-person">
@@ -173,7 +220,9 @@
         <article class="timeline-item">
           <span class="timeline-dot">4</span>
           <div class="timeline-card">
-            <div class="timeline-image" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85')"></div>
+            <div class="timeline-image"
+              style="background-image:url('./images/Shaadi.png')">
+            </div>
             <div class="timeline-content">
               <span class="timeline-date">Mon, 30 Nov 2026 &middot; 11:00 AM</span>
               <h3>Shaadi</h3>
@@ -199,7 +248,9 @@
             <span class="venue-tag">Haldi &amp; Mehndi</span>
             <h3>Sharma Niwas</h3>
             <p>Railway Hunder Road, West Lohanipur,<br>Kadamkuan, Patna &ndash; 800003</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Railway+Hunder+Road+West+Lohanipur+Kadamkuan+Patna+800003" target="_blank" rel="noopener">Get directions</a>
+            <a class="button"
+              href="https://www.google.com/maps/search/?api=1&query=Railway+Hunder+Road+West+Lohanipur+Kadamkuan+Patna+800003"
+              target="_blank" rel="noopener">Get directions</a>
           </div>
         </div>
         <div class="venue-box">
@@ -210,7 +261,8 @@
             <span class="venue-tag">Janeu &amp; Shaadi</span>
             <h3>Mithela Bhawan</h3>
             <p>Mithela Bhawan,<br>Patna, Bihar</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Mithela+Bhawan+Patna" target="_blank" rel="noopener">Get directions</a>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Mithela+Bhawan+Patna"
+              target="_blank" rel="noopener">Get directions</a>
           </div>
         </div>
       </div>
@@ -227,7 +279,7 @@
     </section>
 
     <!-- RSVP -->
-    <section class="rsvp section reveal" id="rsvp">
+    <!-- <section class="rsvp section reveal" id="rsvp">
       <div id="rsvpFormWrap">
         <span class="chapter-no on-light">05</span>
         <h2>Will you<br><em>join us?</em></h2>
@@ -244,7 +296,8 @@
             <input type="hidden" id="attendance" required>
           </div>
 
-          <label>Message <span class="optional">(optional)</span><textarea id="message" rows="3" placeholder="A little note for the couple..."></textarea></label>
+          <label>Message <span class="optional">(optional)</span><textarea id="message" rows="3"
+              placeholder="A little note for the couple..."></textarea></label>
           <button class="button full" type="submit">Send RSVP</button>
         </form>
       </div>
@@ -254,7 +307,7 @@
         <p>Your RSVP has been beautifully received.</p>
         <p>We can't wait to celebrate with you.</p>
       </div>
-    </section>
+    </section> -->
 
     <footer>Made with love &middot; Akriti &amp; Vikash &middot; 2026</footer>
   </main>
@@ -262,9 +315,10 @@
   <button class="music" id="musicBtn" aria-label="Toggle music">&#9834;</button>
   <audio id="bgMusic" loop preload="none">
     <!-- Replace this source with your own MP3 -->
-     <source src="./music.mp3" type="audio/mpeg">
+    <source src="./music.mp3" type="audio/mpeg">
   </audio>
 
   <script src="script.js"></script>
 </body>
+
 </html>
